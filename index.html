@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style/style.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="js/jquery.jkit.1.1.29.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+</head>
+<body>
+	
+  <div class="main_part parallax-window" data-parallax="scroll" data-image-src="img/bg.jpg" data-bleed="0" data-speed="0.6">
+  	<div class="menu">
+  		<ul>
+  			<li class="item"><a href="#tech">Технологии</a></li>
+  			<li class="item"><a href="#portfolio">Портфолио</a></li>
+  			<li class="item"><a href="#scheme">Схема</a></li>
+  			<li class="item"><a href="#contact">Контакты</a></li>
+  		</ul>
+  	</div>
+  	<div class="logo"><div class="textlogo shake">Psycho</div>
+			<div class="desc">
+				<div class="slogan">Презентации</div>
+				<div class="slogan">|</div>
+				<div class="slogan">Веб-дизайн</div>
+			</div>
+  	</div>
+  </div>
+  <div class="tech" id="tech">
+  	<h2>Мы используем</h2>
+  	<div class="tech-pic"><img src="img/3.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/2.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/1.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/4.gif" alt=""></div>
+  	<div class="tech-pic"><img src="img/5.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/6.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/7.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/8.png" alt=""></div>
+  	<div class="tech-pic"><img src="img/9.png" alt=""></div>
+  </div>
+  <div class="portfolio" id="portfolio">
+  <h2>Наши работы</h2>
+ 		<div class="slides">
+ 		<div class="click_preventer"></div>
+		 			<div class="portfolio-container">
+						<div class="control">
+		 			<div class="fixer2"></div>
+		 			<div class="unselectable" id="arrow-left"><</div>
+		 		</div>
+		 		<div class="control">
+		 			<div class="fixer2"></div>
+		 			<div class="unselectable" id="arrow-right">></div>
+		 		</div>
+ 				<div id="portfolio-pic">
+ 					<img class="visible" src="img/port/1.png" alt="">
+					<img src="img/port/2.png" alt="">
+					<img src="img/port/3.png" alt="">
+					<img src="img/port/4.png" alt="">
+					<img src="img/port/5.png" alt="">
+					<img src="img/port/6.png" alt="">
+					<img src="img/port/7.png" alt="">
+					<img src="img/port/8.png" alt="">
+ 				</div>
+ 			</div>
+ 			<script>
+ 			var n=$('#portfolio-pic img').length;
+ 			$(".control:nth-child(2)").on("click",function(){
+	 			if($('#portfolio-pic img:nth-child('+ n +')').css('display')==='block'){
+	 				return false;
+	 			} else{
+	 				$('.click_preventer').css('display','block');
+					var current_pic=$(".visible");
+		 			var next_pic=current_pic.next();
+		 			next_pic.toggleClass('fromright visible');
+		 			current_pic.toggleClass('toleft');
+		 			setTimeout(function  () {next_pic.toggleClass('fromright')},10);
+		 			setTimeout(function  () {current_pic.toggleClass('visible toleft')},700);
+		 			setTimeout(function  () {$('.click_preventer').css('display','none')},800);
+		 					}
+
+ 			});
+
+ 			$(".control:nth-child(1)").on("click",function(){
+	 			if($('#portfolio-pic img:first-child').css('display')==='block'){
+	 				return false;
+	 			} else{
+	 				$('.click_preventer').css('display','block');
+					var current_pic=$(".visible");
+		 			var prev_pic=current_pic.prev();
+		 			prev_pic.toggleClass('fromleft visible');
+		 			current_pic.toggleClass('toright');
+		 			setTimeout(function  () {prev_pic.toggleClass('fromleft')},10);
+		 			setTimeout(function  () {current_pic.toggleClass('visible toright')},700);
+		 			setTimeout(function  () {$('.click_preventer').css('display','none')},800);
+	 			}
+ 			});
+
+ 			window.onload=function(){
+ 				var pic_height=$('.visible').height();
+ 				$('.slides').css('height',pic_height);
+ 			};
+ 			window.onresize=function(){
+ 				var pic_height=$('.visible').height();
+ 				$('.slides').css('height',pic_height);
+
+ 			};
+ 			</script>
+ 		</div>
+ 	</div>
+	<div class="scheme" id="scheme">
+		<h2>Как мы работаем</h2>
+		<div class="diagram">
+			<div class="call piece_container">
+				<h3 class="piece_header">Лиза</h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Контакт-менеджер</h4></div>
+			</div><br>
+			
+			<div class="design piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Дизайнер</h4></div>
+			</div>
+			
+			<div class="backend piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>backend разработчик</h4></div>
+			</div>
+			
+			<div class="frontend piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>frontend разработчик</h4></div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="contact" id="contact">asdasdasd</div>
+
+
+	</body>	
+</html>
