@@ -108,7 +108,7 @@ a {
   display: inline-block; }
 
 .slogan:nth-child(odd) {
-  width: 200px;
+  min-width: 160px;
   text-align: left; }
 
 .tech {
@@ -260,52 +260,7 @@ div.endofpics:hover #arrow-left {
 .fromleft {
   left: -280% !important; }
 
-.scheme {
-  text-align: center;
-  min-height: 700px; }
 
-.scheme h2 {
-  font-size: 60px; }
-
-.diagram{
-}
-.piece_container{
-  margin-right: 4%;
-}
-.scheme_piece{
-  display: inline-block;
-  height: 250px;
-  width: 250px;
-  border-radius: 50%;
-  background-color: red;
-}
-.call{
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 250px;
-  margin: auto;
-}
-.piece_container h3{
-  font-size: 40px;
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: Candy;
-}
-.piece_container h4{
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.call .scheme_piece{
-  position: relative;
-  transition: all .6s ease-in-out;
-}
-.call .piece_description{
-  display: inline-block;
-
-  z-index: 100;
-}
 .next{
   display: inline-block;
     margin: auto;
@@ -321,6 +276,76 @@ div.endofpics:hover #arrow-left {
   box-shadow: inset 0px 0px 8px black;
   outline: none;
   border: none; 
+}
+.scheme {
+  text-align: center;
+  min-height: 700px; }
+
+.scheme h2 {
+  font-size: 60px; }
+
+.diagram{
+}
+.piece_container{
+  margin-right: 4%;
+}
+.piece_container h3{
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: Candy;
+}
+.piece_container h4{
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.scheme_piece{
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: red;
+}
+.client{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+  margin-right: 120px;
+}
+.call{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  margin: auto;
+}
+
+.call .scheme_piece{
+  position: relative;
+  transition: all .6s ease-in-out;
+}
+.call .piece_description{
+  display: inline-block;
+  z-index: 100;
+}
+.zadanie{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  margin-right: 20px;
+}
+.zadanie p{
+  position: absolute;
+}
+.offer{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
 }
 .design{
   display: inline-block;

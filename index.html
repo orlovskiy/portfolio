@@ -7,6 +7,7 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="js/jquery.jkit.1.1.29.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src = "js/scrollreveal.js"></script>
 </head>
 <body>
 	
@@ -110,12 +111,35 @@
  	</div>
 	<div class="scheme" id="scheme">
 		<h2>Как мы работаем</h2>
+
 		<div class="diagram">
+			<div class="client piece_container">
+				<h3 class="piece_header">Вы</h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>клиент</h4></div>
+			</div>
+
 			<div class="call piece_container">
 				<h3 class="piece_header">Лиза</h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Контакт-менеджер</h4></div>
 			</div><br>
+			<div class="talk"><p>Вы обсуждаете детали заказа и если нужно - назначаете время для встречи и составления ТЗ</p></div>
+
+			<div class="zadanie piece_container">
+			<p>asdas</p>
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Задание</h4></div>
+			</div>
+
+
+			<div class="offer piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Договор</h4></div>
+			</div></div></br>
+			<div class="meeting"><p>После согласования всех деталей наши специалисты начинают работу</p></div>
 			
 			<div class="design piece_container">
 				<h3 class="piece_header"></h3>
@@ -134,11 +158,24 @@
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>frontend разработчик</h4></div>
 			</div>
+
+			
 			
 		</div>
 	</div>
 	<div class="contact" id="contact">asdasdasd</div>
 
+		<script>
+		window.sr = ScrollReveal({ reset: true,viewFactor  : 0.9});
+		sr.reveal('.client',{origin:'top',viewFactor  : 0.3, distance:'100px'});
+		sr.reveal('.call',{delay:600,reset: true,viewFactor  : 0.3});
+		sr.reveal('.zadanie',{origin:'right',viewFactor  : 0.8, distance:'130px'});
+		sr.reveal('.offer',{origin:'left',viewFactor  : 0.8, distance:'130px'});
+		sr.reveal('.talk',{delay:600,reset: true,viewFactor  : 0.3});
+		sr.reveal('.design',{delay:300,origin:'left',distance:'200px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.backend',{delay:350,origin:'left',distance:'300px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.frontend',{delay:400,origin:'left',distance:'400px',viewFactor  : 0.7,opacity:0});
 
+		</script>
 	</body>	
 </html>
