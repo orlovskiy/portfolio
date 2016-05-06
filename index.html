@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/loader.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="js/jquery.jkit.1.1.29.min.js"></script>
@@ -120,14 +121,15 @@
 			</div>
 
 			<div class="call piece_container">
-				<h3 class="piece_header">Лиза</h3>
+				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Контакт-менеджер</h4></div>
 			</div><br>
 			<div class="talk"><p>Вы обсуждаете детали заказа и если нужно - назначаете время для встречи и составления ТЗ</p></div>
-
 			<div class="zadanie piece_container">
-			<p>asdas</p>
+				<div class="zadanie_desc desc1">Назначение</div>
+				<div class="zadanie_desc desc2">Стиль</div>
+				<div class="zadanie_desc desc3">Функционал</div>
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Задание</h4></div>
@@ -135,6 +137,9 @@
 
 
 			<div class="offer piece_container">
+				<div class="offer_desc desc1">Сроки</div>
+				<div class="offer_desc desc2">Ответственность</div>
+				<div class="offer_desc desc3">Суммы</div>
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Договор</h4></div>
@@ -157,24 +162,90 @@
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>frontend разработчик</h4></div>
+			</div></br>
+
+			<div class="designer piece_container">
+
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Дизайнер</h4></div>
+			</div>
+			
+			<div class="look piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Макет</h4></div>
 			</div>
 
+			<div class="fixer piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Макет</h4></div>
+			</div></br>
+
+			<div class="backender piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>backend-разработчик</h4></div>
+			</div>
 			
+			<div class="arch piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Архитектура</h4></div>
+			</div>
+
+			<div class="fixer piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4></h4></div>
+			</div></br>
+
+			<div class="frontender piece_container">
+				<h3 class="piece_header"></h3>
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>frontend-разработчик</h4></div>
+			</div>
 			
+			<div class="markup piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Верстка и интерфейс</h4></div>
+			</div>
+
+			<div class="fixer piece_container">
+				<div class="scheme_piece"></div>
+				<div class="piece_description"><h4>Макет</h4></div>
+			</div></br>
+
+			<div class="your_product">
+				<div class="product_bg"></div>
+				<div class="product_base"></div>
+				<div class="product"></div>
+			</div>
+
 		</div>
+	</div>
+	</div>
 	</div>
 	<div class="contact" id="contact">asdasdasd</div>
 
 		<script>
 		window.sr = ScrollReveal({ reset: true,viewFactor  : 0.9});
 		sr.reveal('.client',{origin:'top',viewFactor  : 0.3, distance:'100px'});
-		sr.reveal('.call',{delay:600,reset: true,viewFactor  : 0.3});
+		sr.reveal('.call',{delay:600,viewFactor  : 0.3});
 		sr.reveal('.zadanie',{origin:'right',viewFactor  : 0.8, distance:'130px'});
 		sr.reveal('.offer',{origin:'left',viewFactor  : 0.8, distance:'130px'});
-		sr.reveal('.talk',{delay:600,reset: true,viewFactor  : 0.3});
-		sr.reveal('.design',{delay:300,origin:'left',distance:'200px',viewFactor  : 0.7,opacity:0});
-		sr.reveal('.backend',{delay:350,origin:'left',distance:'300px',viewFactor  : 0.7,opacity:0});
-		sr.reveal('.frontend',{delay:400,origin:'left',distance:'400px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.talk',{delay:600,viewFactor  : 0.3});
+		sr.reveal('.design',{delay:300,origin:'left',distance:'100px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.backend',{delay:350,origin:'left',distance:'350px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.frontend',{delay:400,origin:'left',distance:'650px',viewFactor  : 0.7,opacity:0});
+		sr.reveal('.desc1',{delay:300,origin:'right',viewFactor  : 0.8, distance:'130px'});
+		sr.reveal('.desc2',{delay:600,origin:'right',viewFactor  : 0.8, distance:'130px'});
+		sr.reveal('.desc3',{delay:900,origin:'right',viewFactor  : 0.8, distance:'130px'});
+		sr.reveal('.zadanie_desc',{origin:'right'});
+		sr.reveal('.offer_desc',{origin:'left'});
+		sr.reveal('.designer',{duration:700,rotate:{x:360},origin:'top',viewFactor  : 0.8, distance:'400px'});
+		sr.reveal('.look',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
+		sr.reveal('.backender',{duration:700, delay:50,origin:'top',viewFactor  : 0.8,rotate:{z:65,x:270}, distance:'800px'});
+		sr.reveal('.arch',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
+		sr.reveal('.frontender',{duration:700,rotate:{z:65,x:270},origin:'top',viewFactor  : 0.8, distance:'800px'});
+		sr.reveal('.markup',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
 
 		</script>
 	</body>	
