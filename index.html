@@ -45,8 +45,8 @@
   <h2>Наши работы</h2>
  		<div class="slides">
  		<div class="click_preventer"></div>
-		 			<div class="portfolio-container">
-						<div class="control">
+		 	<div class="portfolio-container">
+				<div class="control">
 		 			<div class="fixer2"></div>
 		 			<div class="unselectable" id="arrow-left"><</div>
 		 		</div>
@@ -67,36 +67,47 @@
  			</div>
  			<script>
  			var n=$('#portfolio-pic img').length;
- 			$(".control:nth-child(2)").on("click",function(){
-	 			if($('#portfolio-pic img:nth-child('+ n +')').css('display')==='block'){
+
+
+ 			var next_button = $(".control:nth-child(2)")
+ 			
+
+ 			var toggleNextPic = function(){
+ 				next_button.off('click',toggleNextPic)
+ 				if($('#portfolio-pic img:nth-child('+ n +')').css('display')==='block'){
 	 				return false;
 	 			} else{
-	 				$('.click_preventer').css('display','block');
 					var current_pic=$(".visible");
 		 			var next_pic=current_pic.next();
 		 			next_pic.toggleClass('fromright visible');
 		 			current_pic.toggleClass('toleft');
 		 			setTimeout(function  () {next_pic.toggleClass('fromright')},10);
 		 			setTimeout(function  () {current_pic.toggleClass('visible toleft')},700);
-		 			setTimeout(function  () {$('.click_preventer').css('display','none')},800);
+		 			setTimeout(function  () {next_button.on('click',toggleNextPic)},700);
 		 					}
+ 			}
 
- 			});
+			next_button.on('click',toggleNextPic)
 
- 			$(".control:nth-child(1)").on("click",function(){
-	 			if($('#portfolio-pic img:first-child').css('display')==='block'){
+
+
+ 			var previous_button = $(".control:nth-child(1)")
+ 			var togglePreviousPic = function(){
+ 				previous_button.off('click',togglePreviousPic)
+ 				if($('#portfolio-pic img:first-child').css('display')==='block'){
 	 				return false;
 	 			} else{
-	 				$('.click_preventer').css('display','block');
 					var current_pic=$(".visible");
 		 			var prev_pic=current_pic.prev();
 		 			prev_pic.toggleClass('fromleft visible');
 		 			current_pic.toggleClass('toright');
 		 			setTimeout(function  () {prev_pic.toggleClass('fromleft')},10);
 		 			setTimeout(function  () {current_pic.toggleClass('visible toright')},700);
-		 			setTimeout(function  () {$('.click_preventer').css('display','none')},800);
-	 			}
- 			});
+		 			setTimeout(function  () {previous_button.on('click',togglePreviousPic)},700);
+		 				 			}
+ 			}
+ 			previous_button.on('click',togglePreviousPic)
+
 
  			window.onload=function(){
  				var pic_height=$('.visible').height();
@@ -214,12 +225,59 @@
 			</div></br>
 
 			<div class="your_product">
-				<div class="product_bg"></div>
-				<div class="product_base"></div>
-				<div class="product"></div>
+				<div class="product_header"><div class="logo">your product</div>
+					<ul class="product_menu">
+						<li><p>item</p></li>
+						<li><p>item</p></li>
+						<li><p>item</p></li>
+						<li><p>item</p>
+						<div class="falling_window">
+							<ul class="window_items">
+								<li>item</li>
+								<li>test item</li>
+								<li>item</li>
+								<li>test item</li>
+							</ul>
+						</div></li>
+					</ul>
+				</div>
+				<div class="product_main">
+					<div class="description"></div>
+				</div>
+		</div></br>
+
+
+
+			<div class="mobile_product_unfolded">
+				<div class="mobile_header">
+				<div class="search_button"></div>
+					<div class="menu_button"></div>
+					<div class="header">mobile</div></div>
+				<div class="mobile_nav">
+					<ul>
+						<li>home</li>
+						<li>popular</li>
+						<li>random</li>
+						<li>contact</li>
+					</ul>
+				</div>
+				<div class="mobile_main"></div>
 			</div>
 
-		</div>
+			<div class="mobile_product">
+				<div class="mobile_header">
+					<div class="menu_button"></div>
+					<div class="header">mobile</div>
+					<div class="search_button"></div>
+					<div class="search_field"><input type="text"></div>
+				</div>
+				<div class="mobile_main">
+					<div class="content" id="content1"><div class="fixer"></div><p>Работаем с умом</p></div>
+					<div class="content" id="content2"><div class="fixer"></div><p>Анализируем рынок</p></div>
+					<div class="content" id="content3"><div class="fixer"></div><p>Всегда попадаем точно в цель</p></div>
+				</div>
+			</div>
+
 	</div>
 	</div>
 	</div>
@@ -246,6 +304,38 @@
 		sr.reveal('.arch',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
 		sr.reveal('.frontender',{duration:700,rotate:{z:65,x:270},origin:'top',viewFactor  : 0.8, distance:'800px'});
 		sr.reveal('.markup',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
+		sr.reveal('.product_header',{duration:700,delay:400,origin:'top',viewFactor  : 0.99,rotate:{z:10,x:70}, distance:'30px'})
+		sr.reveal('.product_menu>li:nth-child(1)',{duration:700,delay:1000,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
+		sr.reveal('.product_menu>li:nth-child(2)',{duration:700,delay:1100,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
+		sr.reveal('.product_menu>li:nth-child(3)',{duration:700,delay:1200,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
+		sr.reveal('.product_menu>li:nth-child(4)',{duration:700,delay:1300,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
+		sr.reveal('.product_main',{duration:700,delay:600,origin:'bottom',viewFactor  : 0.9,rotate:{z:0,x:90}, distance:'210px', scale:1,opacity:0.8})
+		sr.reveal('.falling_window',{duration:800,delay:1450,origin:'top',viewFactor  : 0.99,rotate:{z:30,x:90,y:0},scale:1, distance:'110px'})
+
+//mobile
+
+
+		$('.search_field input').on('focus',function(){
+			$('.mobile_product .mobile_main').css("-webkit-filter",'blur(3px)');
+		})
+		$('.search_field input').on('focusout',function(){
+			$('.mobile_product .mobile_main').css("-webkit-filter",'blur(0px)');
+			$('.search_field input').slideUp('fast','easeOutQuad',function(){});
+		});
+		$('.search_button').on('click',function(){
+			$('.search_field input').slideDown('fast', 'easeInQuad',function(){});
+			$('.search_field input').focus()
+		})
+
+
+		sr.reveal('.mobile_product_unfolded',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:10,x:-90}, distance:'300px',opacity:1})
+		sr.reveal('.mobile_product_unfolded>.mobile_nav',{duration:800,delay:600,origin:'left',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'200px',scale:1})
+		sr.reveal('.mobile_product',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:5,x:-90}, distance:'300px',opacity:1})
+		sr.reveal('.search_button',{duration:700,delay:700,origin:'left',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
+		sr.reveal('.search_field input',{duration:700,delay:900,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, scale:1, distance:'100px',afterReveal:function(){
+			$('.search_field input').focus()}})
+
+
 
 		</script>
 	</body>	
