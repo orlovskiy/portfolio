@@ -123,7 +123,6 @@
  	</div>
 	<div class="scheme" id="scheme">
 		<h2>Как мы работаем</h2>
-
 		<div class="diagram">
 			<div class="client piece_container">
 				<h3 class="piece_header">Вы</h3>
@@ -175,15 +174,23 @@
 				<div class="piece_description"><h4>frontend разработчик</h4></div>
 			</div></br>
 
-			<div class="designer piece_container">
-
+			<div class="designer_wrapper">
+				<div class="designer_head_logo"></div>
+				<div class="top_logo_left_line"></div>
+				<div class="top_logo_right_line"></div>
+				<div class="bottom_logo_left_line"></div>
+				<div class="bottom_logo_right_line"></div>
+				<div class="vertical vertical_l"></div>
+				<div class="vertical vertical_r"></div>
+				<div class="designer piece_container">
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Дизайнер</h4></div>
 			</div>
-			
+			<div class="designer_logo"></div>
 			<div class="look piece_container">
-				<div class="scheme_piece"></div>
+				<div class="scheme_piece">
+				</div>
 				<div class="piece_description"><h4>Макет</h4></div>
 			</div>
 
@@ -191,7 +198,23 @@
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Макет</h4></div>
 			</div></br>
+			</div>
 
+
+
+
+
+
+
+
+			<div class="backender_wrapper">
+				<div class="backender_head_logo"></div>
+				<div class="top_logo_left_line"></div>
+				<div class="top_logo_right_line"></div>
+				<div class="bottom_logo_left_line"></div>
+				<div class="bottom_logo_right_line"></div>
+				<div class="vertical vertical_l"></div>
+				<div class="vertical vertical_r"></div>
 			<div class="backender piece_container">
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
@@ -207,8 +230,20 @@
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4></h4></div>
 			</div></br>
+			</div>
 
-			<div class="frontender piece_container">
+
+
+
+
+			<div class="frontender_wrapper">
+				<div class="top_logo_left_line"></div>
+				<div class="top_logo_right_line"></div>
+				<div class="bottom_logo_left_line"></div>
+				<div class="bottom_logo_right_line"></div>
+				<div class="vertical vertical_l"></div>
+				<div class="vertical vertical_r"></div>
+				<div class="frontender piece_container">
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>frontend-разработчик</h4></div>
@@ -222,7 +257,11 @@
 			<div class="fixer piece_container">
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Макет</h4></div>
-			</div></br>
+			</div>
+			</br>
+			
+			</div>
+			
 
 			<div class="your_product">
 				<div class="product_header"><div class="logo">your product</div>
@@ -261,7 +300,11 @@
 						<li>contact</li>
 					</ul>
 				</div>
-				<div class="mobile_main"></div>
+				<div class="mobile_main">
+					<div class="content" id="content1"><div class="fixer"></div><p>Работаем с умом</p></div>
+					<div class="content" id="content2"><div class="fixer"></div><p>Анализируем рынок</p></div>
+					<div class="content" id="content3"><div class="fixer"></div><p>Всегда попадаем точно в цель</p></div>
+				</div>
 			</div>
 
 			<div class="mobile_product">
@@ -298,9 +341,24 @@
 		sr.reveal('.desc3',{delay:900,origin:'right',viewFactor  : 0.8, distance:'130px'});
 		sr.reveal('.zadanie_desc',{origin:'right'});
 		sr.reveal('.offer_desc',{origin:'left'});
-		sr.reveal('.designer',{duration:700,rotate:{x:360},origin:'top',viewFactor  : 0.8, distance:'400px'});
-		sr.reveal('.look',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
+
+
+
+
+		sr.reveal('.designer_wrapper .vertical',{duration:1000,origin:'bottom',viewFactor  : 0.7, distance:'80%',scale:0.5,opacity:0});
+		/*sr.reveal('.designer_wrapper .vertical_l',{duration:1000,origin:'bottom',viewFactor  : 0.7, distance:'80%',scale:1,opacity:0});*/
+		sr.reveal('.designer',{duration:700,rotate:{x:270},origin:'top',viewFactor  : 0.8, distance:'400px'});
+		sr.reveal('.look',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'})
+		sr.reveal('.designer_logo',{duration:1000,origin:'right',viewFactor  : 0.9, distance:'220%',scale:1,opacity:1,rotate:{z:-90}});
+		sr.reveal('.top_logo_left_line',{delay:300,duration:600,origin:'left',viewFactor  : 0.9, distance:'50%',scale:0.2,opacity:0,rotate:{z:0}});
+		sr.reveal('.top_logo_right_line',{delay:400,duration:600,origin:'right',viewFactor  : 0.9, distance:'50%',scale:0.2,opacity:0,rotate:{z:0}});
+		sr.reveal('.designer_head_logo',{duration:1000,origin:'right',viewFactor  : 0.9, distance:'150%',scale:1,opacity:0,rotate:{z:1080}});
+
+
+
 		sr.reveal('.backender',{duration:700, delay:50,origin:'top',viewFactor  : 0.8,rotate:{z:65,x:270}, distance:'800px'});
+		sr.reveal('.backender_head_logo',{duration:1000,origin:'right',viewFactor  : 0.9, distance:'220%',scale:1,opacity:1,rotate:{z:-90}});
+		sr.reveal('.backender_wrapper .vertical',{duration:1000,origin:'top',viewFactor  : 0.6, distance:'90%',scale:1,opacity:0});
 		sr.reveal('.arch',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
 		sr.reveal('.frontender',{duration:700,rotate:{z:65,x:270},origin:'top',viewFactor  : 0.8, distance:'800px'});
 		sr.reveal('.markup',{duration:400,delay:400,origin:'left',viewFactor  : 0.99, distance:'300px'});
@@ -322,20 +380,32 @@
 			$('.mobile_product .mobile_main').css("-webkit-filter",'blur(0px)');
 			$('.search_field input').slideUp('fast','easeOutQuad',function(){});
 		});
-		$('.search_button').on('click',function(){
+		$('.mobile_product .mobile_header .search_button').on('click',function(){
 			$('.search_field input').slideDown('fast', 'easeInQuad',function(){});
 			$('.search_field input').focus()
 		})
 
 
-		sr.reveal('.mobile_product_unfolded',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:10,x:-90}, distance:'300px',opacity:1})
-		sr.reveal('.mobile_product_unfolded>.mobile_nav',{duration:800,delay:600,origin:'left',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'200px',scale:1})
+		sr.reveal('.mobile_product_unfolded',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:10,x:-90}, distance:'300px',opacity:1,
+			afterReveal:function(){
+				$('.mobile_product_unfolded .mobile_main').css("-webkit-filter",'blur(3px)');}})
+		sr.reveal('.mobile_product_unfolded>.mobile_nav',{duration:800,delay:600,origin:'left',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'200px',scale:1,
+			afterReveal:function(){
+				$('.mobile_product_unfolded .mobile_main').css("-webkit-filter",'blur(3px)');},
+			afterReset:function(){
+				$('.mobile_product_unfolded .mobile_main').css("-webkit-filter",'blur(0px)')
+			}
+			})
 		sr.reveal('.mobile_product',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:5,x:-90}, distance:'300px',opacity:1})
 		sr.reveal('.search_button',{duration:700,delay:700,origin:'left',viewFactor  : 0.99,rotate:{z:0,x:0}, distance:'100px'})
 		sr.reveal('.search_field input',{duration:700,delay:900,origin:'top',viewFactor  : 0.99,rotate:{z:0,x:0}, scale:1, distance:'100px',afterReveal:function(){
-			$('.search_field input').focus()}})
+			$('.search_field input').focus()},
+			afterReset:function(){
+				$('.mobile_product .mobile_main').css("-webkit-filter",'blur(0px)')
+			}
+			})
 
-
+	sr.reveal('.scheme_bg',{duration:800,delay:400,origin:'top',viewFactor  : 0.8,rotate:{z:5,x:-90}, distance:'300px',opacity:1})
 
 		</script>
 	</body>	

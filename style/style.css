@@ -303,6 +303,7 @@ div.endofpics:hover #arrow-left {
   margin-bottom: 10px;
 }
 .scheme_piece{
+  position: relative;
   display: inline-block;
   height: 250px;
   width: 250px;
@@ -387,10 +388,31 @@ div.endofpics:hover #arrow-left {
 .contact {
   height: 700px; 
 }
+
+
+
+
+
+
+
+
+/*DESIGNER*/
+
+.designer_wrapper{
+  position: relative;
+  margin-top: 280px;
+  margin-bottom: 20%;
+}
 .designer{
   perspective:100px;
   margin-top: 80px;
+  margin-bottom: 5%;
   display: inline-block;
+
+}
+.designer .scheme_piece{
+  background:url('../img/icons/skull.png') 50% no-repeat;
+  background-size: 100%;
 }
 .sidewall{
 
@@ -398,22 +420,138 @@ div.endofpics:hover #arrow-left {
 .look{
   display: inline-block;
 }
+.look .scheme_piece{
+  background:url('../img/icons/paper.png') 50% no-repeat;
+  background-size: contain;
+  border-radius:unset;
+}
 .fixer{
   display: inline-block;
   margin-right: 0;
   opacity: 0;
 }
+.designer_head_logo{
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top:-30%; 
+  background: url('../img/icons/brush.png') 50% 10% no-repeat;
+  background-size: contain;
+}
+.top_logo_left_line{
+  left: 10%;
+  width: 30%;
+  height: 0;
+  position: absolute;
+  border-top:8px dotted darkred;
+}
+.top_logo_right_line{
+  right: 10%;
+  width: 30%;
+  height: 0;
+  position: absolute;
+  border-top:8px dotted darkred;
+}
+.designer_logo{
+  position: absolute;
+  transform:rotate(90deg);
+  width: 250px;
+  height: 250px;
+  left: 64%;top: 25%;
+  background: url(../img/designer-logo.png) no-repeat;
+  background-size: contain;
+}
+
+.designer_wrapper .vertical_l{
+  left: 5%;
+  border:2px solid black;
+}
+.designer_wrapper .vertical_r{
+  right: 5%;
+  border:2px solid black;
+}
+.designer_wrapper .bottom_logo_left_line{
+  left: 10%;
+  width: 30%;
+  height: 0;
+  bottom: 0;
+  position: absolute;
+  border-top:8px dotted darkred;
+}
+.designer_wrapper .bottom_logo_right_line{
+  right: 10%;
+  width: 30%;
+  height: 0;
+  bottom: 0;
+  position: absolute;
+  border-top:8px dotted darkred;
+}
+
+
+
+
+
+.vertical{
+  position: absolute;
+  height: 140%;
+  margin:auto;
+  top: 0;bottom: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*BACKENDER*/
+
+.backender_wrapper{
+  position: relative;
+}
+
 .backender{
-  perspective:100px;
   margin-top: 100px;
   display: inline-block;
+  margin-bottom: 8%;
+}
+.backender_head_logo{
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top:-30%; 
+  background: url('../img/icons/brush.png') 50% 10% no-repeat;
+  background-size: contain;
 }
 .arch{
   display: inline-block;
 }
+.backender_wrapper .vertical_l{
+  left: 5%;
+  border:2px solid red;
+}
+.backender_wrapper .vertical_r{
+  right: 5%;
+  border:2px solid red;  
+}
+
+
+
+
+
+
+
+
 .frontender{
   perspective:100px;
-  margin-top: 80px;
+  margin-top: 5%;
   display: inline-block;
 }
 .markup{
@@ -426,7 +564,7 @@ div.endofpics:hover #arrow-left {
 
 .your_product{
   position: relative;
-  margin-top: 50px;
+  margin-top: 250px;
   display: inline-block;
   width: 70%;
   height: 400px;
@@ -568,6 +706,7 @@ div.endofpics:hover #arrow-left {
   width: 100%;
   height: 90%;
   opacity:1;
+  transition: all .4s ease-in-out;
 }
 .mobile_nav ul{
   text-align: left;
