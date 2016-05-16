@@ -73,10 +73,11 @@
  			
 
  			var toggleNextPic = function(){
- 				next_button.off('click',toggleNextPic)
+ 				
  				if($('#portfolio-pic img:nth-child('+ n +')').css('display')==='block'){
 	 				return false;
 	 			} else{
+	 				next_button.off('click',toggleNextPic)
 					var current_pic=$(".visible");
 		 			var next_pic=current_pic.next();
 		 			next_pic.toggleClass('fromright visible');
@@ -93,10 +94,11 @@
 
  			var previous_button = $(".control:nth-child(1)")
  			var togglePreviousPic = function(){
- 				previous_button.off('click',togglePreviousPic)
+ 				
  				if($('#portfolio-pic img:first-child').css('display')==='block'){
 	 				return false;
 	 			} else{
+	 				previous_button.off('click',togglePreviousPic)
 					var current_pic=$(".visible");
 		 			var prev_pic=current_pic.prev();
 		 			prev_pic.toggleClass('fromleft visible');
