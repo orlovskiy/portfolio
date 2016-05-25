@@ -8,18 +8,11 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="js/jquery.jkit.1.1.29.min.js"></script>
   <script src="js/parallax.min.js"></script>
-  <script src="js/jquery.scrollify.js"></script>
+  <script src="js/jquery.scrollify.min.js"></script>
   <script src = "js/scrollreveal.js"></script>
-
-
-  <script>	
-				
-
-
-			</script>
 </head>
 <body>
-  <div id="head" class="main_part parallax-window" data-parallax="scroll" data-image-src="img/bg.jpg" data-bleed="0" data-speed="0.6">
+  	<div id="head" class="main_part parallax-window" data-parallax="scroll" data-image-src="img/bg.jpg" data-bleed="0" data-speed="0.6">
   	<div class="menu">
   		<ul>
   			<li class="item"><a href="#tech">Технологии</a></li>
@@ -36,7 +29,7 @@
 			</div>
   	</div>
   </div>
-  <div class="tech" id="tech">
+  	<div class="tech" id="tech">
   	<h2>Мы используем</h2>
   	<div class="tech-pic"><img src="img/3.png" alt=""></div>
   	<div class="tech-pic"><img src="img/2.png" alt=""></div>
@@ -50,7 +43,7 @@
   </div>
   <div class="portfolio" id="portfolio">
   <h2>Наши работы</h2>
- 		<div class="slides">
+ 			<div class="slides">
  		<div class="click_preventer"></div>
 		 	<div class="portfolio-container">
 				<div class="control">
@@ -130,11 +123,11 @@
  			</script>
  		</div>
  	</div>
-	<div class="scheme" id="scheme">
+		<div class="scheme" id="scheme">
 		<h2>Как мы работаем</h2>
 		<div class="diagram" id="fullpage">
 		<div class="no-assist">
-			<div class="client piece_container">
+				<div class="client piece_container">
 				<h3 class="piece_header">Вы</h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>клиент</h4></div>
@@ -144,7 +137,8 @@
 				<h3 class="piece_header"></h3>
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Контакт-менеджер</h4></div>
-			</div><br>
+			</div>
+			<br>
 			<div class="talk"><p>Вы обсуждаете детали заказа и если нужно - назначаете время для встречи и составления ТЗ</p></div>
 			<div class="zadanie piece_container">
 				<div class="zadanie_desc desc1">Назначение</div>
@@ -184,9 +178,9 @@
 				<div class="piece_description"><h4>frontend разработчик</h4></div>
 			</div></br>
 
-
-
-			<div class="designer_wrapper"  id = "section0">
+			
+			<div class="designer_revealer"></div>
+			<div class="designer_wrapper">
 				<div class="designer_head_logo"></div>
 				<div class="top_logo_left_line"></div>
 				<div class="top_logo_right_line"></div>
@@ -202,15 +196,14 @@
 			</div>
 			<div class="designer_job piece_container">
 				<div class="scheme_piece"></div>
-				<div class="piece_description"><h4</h4></div>
+				<div class="piece_description"><h4></h4></div>
 			</div>
 
 			<div class="look piece_container">
 				<div class="scheme_piece"></div>
 				<div class="piece_description"><h4>Макет</h4></div>
 			</div></br>
-			</div>
-
+		</div>
 
 
 
@@ -335,7 +328,6 @@
 	</div>
 	</div>
 	<div class="contact" id="contact">asdasdasd</div>
-
 		<script>
 		window.sr = ScrollReveal({ reset: true,viewFactor  : 0.9});
 		sr.reveal('.client',{origin:'top',viewFactor  : 0.3, distance:'100px'});
@@ -352,19 +344,21 @@
 		sr.reveal('.zadanie_desc',{origin:'right'});
 		sr.reveal('.offer_desc',{origin:'left'});
 
+			
 
 
 
-		sr.reveal('.designer_wrapper .vertical',{duration:1000,origin:'bottom',viewFactor  : 0.7, distance:'80%',scale:0.5,opacity:0});
+
+		sr.reveal('.designer_wrapper .vertical',{duration:1000,origin:'bottom',viewFactor  : 0.7, distance:'80%',scale:1,opacity:0
+				});
 		/*sr.reveal('.designer_wrapper .vertical_l',{duration:1000,origin:'bottom',viewFactor  : 0.7, distance:'80%',scale:1,opacity:0});*/
 		sr.reveal('.designer',{duration:700,rotate:{x:270},origin:'top',viewFactor  : 0.8, distance:'400px'});
 		sr.reveal('.look',{duration:800,delay:0,origin:'left',viewFactor  : 0.99, distance:'200%',scale:0.2})
 		sr.reveal('.designer_job',{delay:0,duration:900,origin:'left',viewFactor  : 0.99, distance:'150%',scale:0.2,opacity:0,rotate:{z:-180}});
 		sr.reveal('.top_logo_left_line',{delay:300,duration:600,origin:'left',viewFactor  : 0.9, distance:'50%',scale:0.2,opacity:0,rotate:{z:0}});
 		sr.reveal('.top_logo_right_line',{delay:400,duration:600,origin:'right',viewFactor  : 0.9, distance:'50%',scale:0.2,opacity:0,rotate:{z:0}});
-
-
-		sr.reveal('.designer_head_logo',{duration:1000,origin:'right',viewFactor  : 0.7, distance:'150%',scale:1,opacity:0,rotate:{z:1080}});
+		sr.reveal('.designer_head_logo',{duration:1000,origin:'right',viewFactor  : 0.7, distance:'150%',scale:1,opacity:0,rotate:{z:1080}
+			});
 
 
 
@@ -373,11 +367,11 @@
 
 		
 /*		sr.reveal('.backender_head_logo',{duration:1000,origin:'right',viewFactor  : 0.9, distance:'220%',scale:1,opacity:1,rotate:{z:-90}});*/
-		sr.reveal('.parts .part1',{duration:300,origin:'left',viewFactor  : 0.9, distance:'620%',scale:1,opacity:0,rotate:{z:-540},easing:'cubic-bezier(0.8, 0.9, 0.8, 1)',
+		sr.reveal('.parts .part1',{duration:300,origin:'left',viewFactor  : 0.7, distance:'620%',scale:1,opacity:0,rotate:{z:-540},easing:'cubic-bezier(0.8, 0.9, 0.8, 1)',
 			afterReveal:function(){$('.parts .part1').toggleClass('rotateleft')},
 			afterReset:function(){$('.parts .part1').toggleClass('rotateleft')}
 		});
-		sr.reveal('.parts .part2',{duration:300,origin:'right',viewFactor  : 0.9, distance:'620%',scale:1,opacity:0,rotate:{z:540},easing:'cubic-bezier(0.8, 0.9, 0.8, 1)',
+		sr.reveal('.parts .part2',{duration:300,origin:'right',viewFactor  : 0.7, distance:'620%',scale:1,opacity:0,rotate:{z:540},easing:'cubic-bezier(0.8, 0.9, 0.8, 1)',
 			afterReveal:function(){$('.parts .part2').toggleClass('rotateright')},
 			afterReset:function(){$('.parts .part2').toggleClass('rotateright')}
 	});
@@ -392,7 +386,7 @@
 
 
 
-		sr.reveal('.frontender_head_logo',{duration:1000,origin:'right',viewFactor  : 0.9, distance:'220%',scale:1,opacity:1,rotate:{z:-90}});
+		sr.reveal('.frontender_head_logo',{duration:1000,origin:'right',viewFactor  : 0.7, distance:'220%',scale:1,opacity:1,rotate:{z:-90}});
 		sr.reveal('.frontender_wrapper .vertical',{duration:1000,origin:'top',viewFactor  : 0.2, distance:'90%',scale:1,opacity:0});
 		sr.reveal('.frontender',{duration:700, delay:50,origin:'top',viewFactor  : 0.8,rotate:{z:65,x:270}, distance:'800px'});
 		sr.reveal('.frontender_job',{duration:800,delay:0,origin:'left',viewFactor  : 0.99, distance:'100%',scale:0.2});
@@ -445,6 +439,24 @@
 				$('.mobile_product .mobile_main').css("-webkit-filter",'blur(0px)')
 			}
 			})
+		/*function scrollSnap(top_element,snap_block){
+			var scrolled = window.pageYOffset;
+			console.log(scrolled);
+			var top_threshold = top_element.offset().top+snap_block.height()/1.2;
+			console.log(scrolled + top_threshold)
+			if (scrolled > top_threshold){
+			window.scrollTo(0,top_element.offset().top+snap_block.height()/1.2);
+			console.log('worked')
+			
+		}
+	} 
+	window.onscroll = scrollSnap($('.frontend'),$('.designer_wrapper'));*/
+	function scrollSnap(){
+		var scrolled = window.pageYOffset;
+		var target = $('.frontend').offset().top;
+		console.log(scrolled + target)
+	}
+	window.onscroll = function(){scrollSnap();}
 
 		</script>
 	</body>	

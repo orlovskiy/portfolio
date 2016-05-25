@@ -346,7 +346,7 @@ div.endofpics:hover #arrow-left {
 }
 .zadanie_desc{
   font-size: 25px;
-  right:270px;
+  right:100%;
   z-index: -1;
 }
 
@@ -365,7 +365,7 @@ div.endofpics:hover #arrow-left {
 .offer_desc{
   font-size: 25px;
   left: unset;
-  left: 270px;
+  left: 100%;
   z-index: -1;
 }
 .zadanie p{
@@ -399,10 +399,16 @@ div.endofpics:hover #arrow-left {
 
 
 /*DESIGNER*/
-
+.designer_revealer{
+  height: 100px;
+  width: 100%;
+  margin-bottom: 100px;
+  background-color: red;
+}
 .designer_wrapper{
+  -webkit-scroll-snap-type: mandatory;
+  -webkit-scroll-snap-destination: 50% 50%;
   position: relative;
-  margin-top: 280px;
 }
 .designer{
   margin-top: 80px;
