@@ -181,8 +181,10 @@
 			</div></br>
 
 			
-			<div class="designer_revealer"></div>
-			<div class="designer_wrapper">
+			<div class="designer_wrapper snapped" >
+<!-- 				<div class="scroller">
+					<div class="scroll_element"></div>
+				</div> -->
 				<div class="designer_head_logo"></div>
 				<div class="top_logo_left_line"></div>
 				<div class="top_logo_right_line"></div>
@@ -209,7 +211,7 @@
 
 
 
-			<div class="backender_wrapper" id = "section1">
+			<div class="backender_wrapper snapped" >
 				<div class="backender_head_logo">
 					<div class="parts">
 						<div class="part1"></div>
@@ -453,13 +455,35 @@
 		}
 	} 
 	window.onscroll = scrollSnap($('.frontend'),$('.designer_wrapper'));*/
-	function scrollSnap(){
+	/*function scrollSnap(){
 		var scrolled = window.pageYOffset;
 		var target = $('.frontend').offset().top;
-		console.log(scrolled + target)
+		console.log('scrolled: ' + scrolled + ' target:' + target)
+		if (scrolled > target){
+			window.scrollTo(0,target+$('.designer_wrapper').height()/1.2);
+			window.onscroll = function(){}
+		}
 	}
-	window.onscroll = function(){scrollSnap();}
+	window.onscroll = function(){scrollSnap()}*/
 
+
+function scrollSnap(element){
+	var scrolled = window.pageYOffset;
+	var top_threshold = element.offset().top - element.height();
+	var bottom_threshold = Number(element.offset().top)+element.height();
+	console.log(bottom_threshold+'>'+scrolled+'<'+top_threshold)
+	if(scrolled>top_threshold && scrolled<bottom_threshold){
+		$('body').toggleClass('noscroll')
+		$('html body').animate({
+			scrollTop: element.offset().top - element.height()/2
+		},400);
+		window.onscroll = function(){};
+		setTimeout(function(){$('body').toggleClass('noscroll')},1000);
+	}
+}
+window.onscroll=function(){
+
+}
 		</script>
 	</body>	
 </html>

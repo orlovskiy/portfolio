@@ -1,3 +1,7 @@
+.noscroll{
+  overflow: hidden;
+}
+
 @font-face {
   font-family: Candy;
   /* Гарнитура шрифта */
@@ -405,16 +409,25 @@ div.endofpics:hover #arrow-left {
 
 
 /*DESIGNER*/
-.designer_revealer{
-  height: 100px;
+.designer_wrapper .scroller{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: scroll;
   width: 100%;
-  margin-bottom: 100px;
   background-color: red;
+}
+.designer_wrapper .scroller .scroll_element{
+  width: 100%;
+  height: 500%;
+  background-color: blue;
 }
 .designer_wrapper{
   -webkit-scroll-snap-type: mandatory;
   -webkit-scroll-snap-destination: 50% 50%;
   position: relative;
+  margin-top: 200px;
 }
 .designer{
   margin-top: 80px;
