@@ -346,8 +346,11 @@ div.endofpics:hover #arrow-left {
 }
 .zadanie_desc{
   font-size: 25px;
-  right:270px;
+  right:110%;
   z-index: -1;
+}
+.zadanie .scheme_piece{
+  position: relative;
 }
 
 .desc1{
@@ -365,7 +368,7 @@ div.endofpics:hover #arrow-left {
 .offer_desc{
   font-size: 25px;
   left: unset;
-  left: 270px;
+  left:110%;
   z-index: -1;
 }
 .zadanie p{
@@ -376,6 +379,9 @@ div.endofpics:hover #arrow-left {
   display: inline-block;
   text-align: center;
   margin: auto;
+}
+.offer .scheme_piece{
+  position: relative;
 }
 .design{
   display: inline-block;
