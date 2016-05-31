@@ -467,7 +467,10 @@
 	window.onscroll = function(){scrollSnap()}*/
 
 
+
 function scrollSnap(element){
+	$('.snapped').toggleClass('snap_job')
+	var snapped = $('.snap_job')
 	var scrolled = window.pageYOffset;
 	var top_threshold = element.offset().top - element.height();
 	var bottom_threshold = Number(element.offset().top)+element.height();
@@ -479,11 +482,10 @@ function scrollSnap(element){
 		},400);
 		window.onscroll = function(){};
 		setTimeout(function(){$('body').toggleClass('noscroll')},1000);
+		element.toggleClass('snap_job')
 	}
 }
-window.onscroll=function(){
-
-}
+window.onscroll = function(){scrollSnap($('.designer_wrapper'))}
 		</script>
 	</body>	
 </html>
