@@ -772,11 +772,17 @@ div.endofpics:hover #arrow-left {
   display: inline-block;
 }
 
+/*.product_snapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:-10%;
+}*/
 .your_product{
   position: relative;
-  margin-top: 250px;
+  margin-top: 200px;
   display: inline-block;
-  width: 70%;
+  width: 65%;
   height: 400px;
   border-radius: 10px;
   margin-bottom: 50px;
@@ -861,6 +867,27 @@ div.endofpics:hover #arrow-left {
   #17E8C2;
   background-size: 30%;
 
+}
+.mobile_wrapper{
+  position: relative;
+
+}
+.mobile_snapper{
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  top:30%;
+}
+.dev_nav{
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  color:lightgreen;
+  font-family: Candy;
+  font-size: 90px;
+}
+.dev_nav a {
+  display: block;
 }
 .mobile_product_unfolded, .mobile_product{
   overflow: hidden;
@@ -1008,6 +1035,7 @@ div.endofpics:hover #arrow-left {
   background: url('../img/target.svg') 10% 50% no-repeat;
   background-size:contain ;
 }
-
+.contact{
+}
 
 /*# sourceMappingURL=style.css.map */

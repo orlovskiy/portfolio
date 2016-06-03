@@ -242,7 +242,7 @@
 			</div>
 
 
-		<div class="frontender_wrapper">
+		<div class="frontender_wrapper snapped">
 				<div class="frontender_head_logo"></div>
 				<div class="top_logo_left_line"></div>
 				<div class="top_logo_right_line"></div>
@@ -270,7 +270,8 @@
 
 
 
-			<div class="your_product">
+			<div class="your_product snapped">
+			<!-- <div class="product_snapper snapped"></div> -->
 				<div class="product_header"><div class="logo">your product</div>
 					<ul class="product_menu">
 						<li><p>item</p></li>
@@ -290,11 +291,13 @@
 				<div class="product_main">
 					<div class="description"></div>
 				</div>
-		</div></br>
+		</div>
 
 
-
-			<div class="mobile_product_unfolded">
+		
+		<div class="mobile_wrapper">
+		<div class="mobile_snapper snapped"></div>
+						<div class="mobile_product_unfolded">
 				<div class="mobile_header">
 				<div class="search_button"></div>
 					<div class="menu_button"></div>
@@ -327,11 +330,20 @@
 					<div class="content" id="content3"><div class="fixer"></div><p>Всегда попадаем точно в цель</p></div>
 				</div>
 			</div>
+		</div>
 
 	</div>
 	</div>
 	</div>
-	<div class="contact" id="contact">asdasdasd</div>
+	<div class="contact" id="contact">xer
+	</div>
+
+
+
+
+
+
+
 		<script>
 		window.sr = ScrollReveal({ reset: true,viewFactor  : 0.9});
 		sr.reveal('.client',{origin:'top',viewFactor  : 0.3, distance:'100px'});
@@ -494,24 +506,30 @@ function scrollSnap(){
 	$('.snapped').toggleClass('snap_job')
 	window.onscroll = function(){
 	var scrolled = window.pageYOffset;
+	var first = $('.snapped').first()
+	var last = $('.snapped').last()
+	if(scrolled < first.offset().top - first.height()/1.5){
+			first.addClass('snap_job')
+		}
+	if(scrolled > last.offset().top + last.height()){
+		last.addClass('snap_job')
+	}
 	$('.snap_job').each(function(){
 	var top_threshold = $(this).offset().top - $(this).height()/2;
 	var bottom_threshold = $(this).offset().top + $(this).height();
 	if(scrolled>top_threshold && scrolled<bottom_threshold){
 		$('body').toggleClass('noscroll')
 		$('html body').animate({
-				scrollTop: $(this).offset().top - $(this).height()/2
+				scrollTop: $(this).offset().top - $(this).height()/2.5
 			},400);
-		setTimeout(function(){$('body').toggleClass('noscroll')},1000);
+		setTimeout(function(){$('body').toggleClass('noscroll')},1200);
 		$(this).toggleClass('snap_job');
 		var block = $(this)
-		console.log('элемент '+ $(this) +'сохранено в block: '+ block)
 		$('.snapped').each(function(){
 			var block2 = $(this)
 			if(block.offset().top!=block2.offset().top){
 				block2.addClass('snap_job')
 			}
-			console.log('При переборке: '+$(this)+'сохраняется в block2: '+block2+'сравнивается с ' + block)
 		})
 
 }
@@ -521,5 +539,12 @@ function scrollSnap(){
 scrollSnap()
 
 		</script>
+		<div class="dev_nav">
+			<a href="#head">up</a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href="#contact">contact</a>
+		</div>
 	</body>	
 </html>
