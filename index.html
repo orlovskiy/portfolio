@@ -468,7 +468,7 @@
 
 
 
-function scrollSnap(element){
+/*function scrollSnap(element){
 	$('.snapped').toggleClass('snap_job')
 	var snapped = $('.snap_job')
 	var scrolled = window.pageYOffset;
@@ -485,7 +485,41 @@ function scrollSnap(element){
 		element.toggleClass('snap_job')
 	}
 }
-window.onscroll = function(){scrollSnap($('.designer_wrapper'))}
+window.onscroll = function(){scrollSnap($('.designer_wrapper'))}*/
+
+		</script>
+		<script>
+
+function scrollSnap(){
+	$('.snapped').toggleClass('snap_job')
+	window.onscroll = function(){
+	var scrolled = window.pageYOffset;
+	$('.snap_job').each(function(){
+	var top_threshold = $(this).offset().top - $(this).height()/2;
+	var bottom_threshold = $(this).offset().top + $(this).height();
+	if(scrolled>top_threshold && scrolled<bottom_threshold){
+		$('body').toggleClass('noscroll')
+		$('html body').animate({
+				scrollTop: $(this).offset().top - $(this).height()/2
+			},400);
+		setTimeout(function(){$('body').toggleClass('noscroll')},1000);
+		$(this).toggleClass('snap_job');
+		var block = $(this)
+		console.log('элемент '+ $(this) +'сохранено в block: '+ block)
+		$('.snapped').each(function(){
+			var block2 = $(this)
+			if(block.offset().top!=block2.offset().top){
+				block2.addClass('snap_job')
+			}
+			console.log('При переборке: '+$(this)+'сохраняется в block2: '+block2+'сравнивается с ' + block)
+		})
+
+}
+})
+}
+}
+scrollSnap()
+
 		</script>
 	</body>	
 </html>
