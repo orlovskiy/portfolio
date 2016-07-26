@@ -18,7 +18,7 @@
   			<li class="item"><a href="#tech">Технологии</a></li>
   			<li class="item"><a href="#portfolio">Портфолио</a></li>
   			<li class="item"><a href="#scheme">Схема</a></li>
-  			<li class="item"><a href="#contact">Контакты</a></li>
+  			<li class="item"><a href="#contacts">Контакты</a></li>
   		</ul>
   	</div>
   	<div class="logo"><div class="textlogo shake">Psycho</div>
@@ -335,7 +335,23 @@
 	</div>
 	</div>
 	</div>
-	<div class="contact" id="contact">xer
+	<div class="contacts" id="contacts">
+		<div class="bg">
+		<div class="contacts_wrapper_fixer"></div>
+		<div class="contacts_wrapper">
+			<div class="phone"><span class = "header" >Телефон:</span><span class = "contact_desc">+7 (916)-733-03-40</span></div>
+			<div class="mail"><span class = "header" >E-mail:</span><span class = "contact_desc">contact@work4psycho.ru</span></div>
+			<div class="social">
+				<a href="">VK</a>
+				<a href="">FB</a>
+				<a href="">GH</a>
+				<a href="">IN</a>
+			</div>
+		</div>
+		</div>
+		</div>
+
+		
 	</div>
 
 
@@ -517,10 +533,11 @@ function scrollSnap(){
 	$('.snap_job').each(function(){
 	var top_threshold = $(this).offset().top - $(this).height()/2;
 	var bottom_threshold = $(this).offset().top + $(this).height();
+
 	if(scrolled>top_threshold && scrolled<bottom_threshold){
 		$('body').toggleClass('noscroll')
 		$('html body').animate({
-				scrollTop: $(this).offset().top - $(this).height()/2.5
+				scrollTop: $(this).offset().top - $(this).height()/3.2
 			},400);
 		setTimeout(function(){$('body').toggleClass('noscroll')},1200);
 		$(this).toggleClass('snap_job');
@@ -544,7 +561,7 @@ scrollSnap()
 			<a href=""></a>
 			<a href=""></a>
 			<a href=""></a>
-			<a href="#contact">contact</a>
+			<a href="#contacts">contact</a>
 		</div>
 	</body>	
 </html>
